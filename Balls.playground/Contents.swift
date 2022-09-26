@@ -5,6 +5,7 @@ protocol BallProtocol {
     init(color: UIColor, radius: Int, coordinates: (x: Int, y: Int))
 }
 
+@available(iOS 2, *)
 public class Ball: UIView, BallProtocol {
     required public init(color: UIColor, radius: Int, coordinates: (x: Int, y: Int)){
         // создание графического прямоугольника
@@ -29,6 +30,7 @@ protocol SquareAreaProtocol {
     func setBalls(withColor: [UIColor], andRadius: Int)
 }
 
+@available(iOS 2, *)
 public class SquareArea: UIView, SquareAreaProtocol {
     // коллекция всех шариков
     private var balls: [Ball] = []
